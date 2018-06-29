@@ -48,7 +48,7 @@ class TableViewController: UITableViewController {
                             "http://www.tomatodosirak.co.kr/"/*토마토*/,
                             "http://zzambbong.com/"/*홍콩반점*/]
  */
-    var foodStores:[hello] = [
+    var foodStores:[FoodStore] = [
         FoodStore(name: "늘해랑", image: "01", address: "부산광역시 부산진구 양정1동 350-1", tel: "051-863-6997", menu: "수육백반, 돼지국밥, 순대국밥, 내장국밥", type: "돼지국밥집"),
         FoodStore(name: "번개반점", image: "02", address: "부산광역시 부산진구 양정동 418-282", tel: "051-852-9969", menu: "짜장면, 짬뽕, 짬짜면, 탕수육, 탕짜면, 군만두, 양장피", type: "중화요리"),
         FoodStore(name: "아딸", image: "03", address: "부산광역시 부산진구 양정동 393-18", tel: "051-852-9969", menu: "떡볶이, 오뎅, 떡강정, 핫도그, 튀김", type: "분식점"),
