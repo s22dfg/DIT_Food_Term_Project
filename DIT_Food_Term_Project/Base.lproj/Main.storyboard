@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RE" rowHeight="128" id="3T8-eT-eoV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RE" rowHeight="128" id="3T8-eT-eoV" customClass="FoodStoreTableViewCell" customModule="DIT_Food_Term_Project" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3T8-eT-eoV" id="HjB-pC-sJp" customClass="FoodStoreTableViewCell" customModule="DIT_Food_Term_Project" customModuleProvider="target">
@@ -77,6 +77,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="foodStoreCellAddress" destination="LUo-8l-SDD" id="h50-Ts-4z0"/>
+                                    <outlet property="foodStoreCellImage" destination="Oja-3K-YTl" id="yNa-e9-4n4"/>
+                                    <outlet property="foodStoreCellName" destination="6xT-6e-OKf" id="M5I-ig-mQr"/>
+                                    <outlet property="foodStoreCellTel" destination="tDT-Tz-QNb" id="GQK-AB-wnp"/>
                                     <segue destination="akd-jg-2XU" kind="show" id="aQ8-hr-Aza"/>
                                 </connections>
                             </tableViewCell>
