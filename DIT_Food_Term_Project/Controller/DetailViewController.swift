@@ -41,7 +41,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.textLabel?.text = "메뉴 : " + menu
             return cell
         default :
-            let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as! MapTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as! TableViewCell
             cell.configure(location: local1)
             return cell
         }

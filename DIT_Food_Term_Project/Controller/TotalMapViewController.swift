@@ -12,7 +12,7 @@ import MapKit
 class TotalMapViewController: UIViewController {
 
     @IBOutlet weak var totalMapView: MKMapView!
-    var totalFoodStores: [FoodStore] = []
+    var totalFoodStores: [foodStores] = []
     var annotations = [MKPointAnnotation]()
     
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class TotalMapViewController: UIViewController {
         viewMap(items: totalFoodStores)
     }
     
-    func  viewMap(items: [FoodStore]) {
+    func  viewMap(items: [foodStores]) {
         for item in items {
             let geoCoder = CLGeocoder()
             geoCoder.geocodeAddressString(item.address , completionHandler: {

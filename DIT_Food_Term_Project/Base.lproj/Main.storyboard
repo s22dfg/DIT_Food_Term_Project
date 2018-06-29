@@ -60,6 +60,14 @@
                                                 <constraint firstAttribute="width" constant="200" id="Umf-HW-cQg"/>
                                             </constraints>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZM-9y-dNE">
+                                            <rect key="frame" x="321" y="31" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="link"/>
+                                            <connections>
+                                                <action selector="btlink:" destination="TvY-ke-EpG" eventType="touchUpInside" id="DTF-Wk-llx"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Oja-3K-YTl" firstAttribute="top" secondItem="HjB-pC-sJp" secondAttribute="topMargin" id="4yA-uo-Rqu"/>
