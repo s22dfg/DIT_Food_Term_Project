@@ -7,12 +7,36 @@
 //
 
 import UIKit
+import MapKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate{
+    
+    
+    @IBOutlet weak var cellImageView: UIImageView!
+    @IBOutlet weak var detailTableView: UITableView!
+    
+    var cellImage: String = ""
+    var name: String = ""
+    var local1: String = ""
+    var tel1: String = ""
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        detailTableView.delegate = self
+        detailTableView.dataSource = self
+        
+        cellImageView.image = UIImage(named: cellImage)
+        self.title = name
         // Do any additional setup after loading the view.
     }
 

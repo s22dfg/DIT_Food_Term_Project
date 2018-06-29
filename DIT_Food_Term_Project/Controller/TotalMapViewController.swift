@@ -12,44 +12,49 @@ import MapKit
 class TotalMapViewController: UIViewController {
 
     @IBOutlet weak var totalMapView: MKMapView!
-    
-    var location = ""
-    var name = ""
-    var tel = ""
+    var totalFoodStores: [FoodStore] = []
+    var annotations = [MKPointAnnotation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(location, completionHandler: {
-            (placemarks: [CLPlacemark]?, error: Error?) -> Void in
-            
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            if placemarks != nil {
-                let placemark = placemarks![0]
-                
-                // Add annotation
-                let annotation = MKPointAnnotation()
-                annotation.title = self.name
-                annotation.subtitle = self.tel
-                
-                if let location = placemark.location {
-                    annotation.coordinate = location.coordinate
-                    self.totalMapView.addAnnotation(annotation)
-                    
-                    // Set zoom level
-                    let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 700, 700)
-                    self.totalMapView.setRegion(region, animated: true)
-                    self.totalMapView.selectAnnotation(annotation, animated: true)
+        viewMap(items: totalFoodStores)
+    }
+    
+    func  viewMap(items: [FoodStore]) {
+        for item in items {
+            let geoCoder = CLGeocoder()
+            geoCoder.geocodeAddressString(item.address , completionHandler: {
+                (placemarks: [CLPlacemark]?, error: Error?) -> Void in
+                if let error = error {
+                    print(error)
+                    return
                 }
-            }
-        })
-
+                
+                if placemarks != nil {
+                    let placemark = placemarks![0]
+                    print(placemarks![0])
+                    
+                    // pin point 을 저장
+                    let annotation = MKPointAnnotation()
+                    
+                    if let location = placemark.location {
+                        // Add annotation
+                        annotation.title = item.name
+                        annotation.subtitle = item.type
+                        annotation.coordinate = location.coordinate
+                        self.annotations.append(annotation)
+                        self.totalMapView.addAnnotations(self.annotations)
+                        
+                        // Set zoom level
+                        //                              let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 800, 800)
+                        //                              self.totalMapView.setRegion(region, animated: true)
+                    }
+                }
+                self.totalMapView.showAnnotations(self.annotations, animated: true)
+            })
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -61,5 +66,5 @@ class TotalMapViewController: UIViewController {
     */
     }
     
-}
+
 

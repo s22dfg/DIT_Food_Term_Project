@@ -10,11 +10,42 @@ import UIKit
 
 class MapViewController: UIViewController {
 
+    var location = ""
+    var name = ""
+    var tel = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-    }
+        
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(location, completionHandler: {
+            (placemarks: [CLPlacemark]?, error: Error?) -> Void in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            if placemarks != nil {
+                let placemark = placemarks![0]
+                
+                // Add annotation
+                let annotation = MKPointAnnotation()
+                annotation.title = self.name
+                annotation.subtitle = self.tel
+                
+                if let location = placemark.location {
+                    annotation.coordinate = location.coordinate
+                    self.totalMapView.addAnnotation(annotation)
+                    
+                    // Set zoom level
+                    let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 700, 700)
+                    self.totalMapView.setRegion(region, animated: true)
+                    self.totalMapView.selectAnnotation(annotation, animated: true)
+                }
+            }
+        })
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
