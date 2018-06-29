@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MapKit
 class MapViewController: UIViewController {
 
     var location = ""
@@ -37,17 +37,17 @@ class MapViewController: UIViewController {
                 
                 if let location = placemark.location {
                     annotation.coordinate = location.coordinate
-                    self.totalMapView.addAnnotation(annotation)
+                    self.TotalMapView.addAnnotation(annotation)
                     
                     // Set zoom level
                     let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 700, 700)
-                    self.totalMapView.setRegion(region, animated: true)
-                    self.totalMapView.selectAnnotation(annotation, animated: true)
+                    self.TotalMapView.setRegion(region, animated: true)
+                    self.TotalMapView.selectAnnotation(annotation, animated: true)
                 }
             }
         })
 
-    override func didReceiveMemoryWarning() {
+        func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

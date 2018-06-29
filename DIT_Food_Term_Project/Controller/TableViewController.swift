@@ -11,19 +11,25 @@ import UIKit
 class TableViewController: UITableViewController {
 
     @IBAction func btlink(_ sender: Any) {
+        UIApplication.shared.open(URL(String: foodStores[indexPath.row].link)! as URL, options: :, completionHandler: nil)
     }
     
     
     // 데이터 클래스 객체 생성
     var foodStores:[FoodStore] = [
-        FoodStore(name: "늘해랑", image: "01", address: "부산광역시 부산진구 양정1동 350-1", tel: "051-863-6997"),
-        FoodStore(name: "번개반점", image: "02", address: "부산광역시 부산진구 양정동 418-282", tel: "051-852-9969"),
-        FoodStore(name: "아딸", image: "03", address: "부산광역시 부산진구 양정동 393-18", tel: "051-852-9969"),
-        FoodStore(name: "왕짜장", image: "04", address: "부산광역시 부산진구 양정1동 356-22", tel: "051-863-6997"),
-        FoodStore(name: "토마토 도시락", image: "05", address: "부산광역시 부산진구 양정1동 산19-8", tel: "051-863-6997"),
-        FoodStore(name: "홍콩반점", image: "06", address: "부산광역시 부산진구 양정동 353-38", tel: "051-863-6997"),
+        FoodStore(name: "늘해랑", image: "01", address: "부산광역시 부산진구 양정1동 350-1", tel: "051-863-6997", link: "https://store.naver.com/restaurants/detail?entry=plt&id=19342285&query=%EB%8A%98%ED%95%B4%EB%9E%91"),
+        FoodStore(name: "번개반점", image: "02", address: "부산광역시 부산진구 양정동 418-282", tel: "051-852-9969", link: "https://store.naver.com/restaurants/detail?id=16394779"),
+        FoodStore(name: "아딸", image: "03", address: "부산광역시 부산진구 양정동 393-18", tel: "051-852-9969", link: "http://addal.kr/"),
+        FoodStore(name: "왕짜장", image: "04", address: "부산광역시 부산진구 양정1동 356-22", tel: "051-863-6997", link: "https://store.naver.com/restaurants/detail?id=16447856"),
+        FoodStore(name: "토마토 도시락", image: "05", address: "부산광역시 부산진구 양정1동 산19-8", tel: "051-863-6997", link: "http://www.tomatodosirak.co.kr/"),
+        FoodStore(name: "홍콩반점", image: "06", address: "부산광역시 부산진구 양정동 353-38", tel: "051-863-6997", link: "http://zzambbong.com/"),
         ]
-    
+    var linkSite = ["https://store.naver.com/restaurants/detail?entry=plt&id=19342285&query=%EB%8A%98%ED%95%B4%EB%9E%91"/*늘해랑*/,
+                            "https://store.naver.com/restaurants/detail?id=16394779"/*번개반점*/,
+                            "http://addal.kr/"/*아딸*/,
+                            "https://store.naver.com/restaurants/detail?id=16447856"/*왕짜장*/,
+                            "http://www.tomatodosirak.co.kr/"/*토마토*/,
+                            "http://zzambbong.com/"/*홍콩반점*/]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,11 +64,12 @@ class TableViewController: UITableViewController {
         //        cell.foodStoreCellAddress.text = foodStoreAddress[indexPath.row]
         //        cell.foodStoreCellTel.text = foodStoreTel[indexPath.row]
         
-        cell.Food Store Cell Image.image = UIImage(named: foodStores[index.row].image)
-        cell.food Store Cell Name.text = foodStores[indexPath.row].name
+       
+       /* cell.food Store Cell Name.text = foodStores[indexPath.row].name*/
         cell.foodStoreCellImage.image = UIImage(named: foodStores[indexPath.row].image)
         cell.foodStoreCellAddress.text = foodStores[indexPath.row].address
         cell.foodStoreCellTel.text = foodStores[indexPath.row].tel
+        /*Button.foodStoreLink.URL = foodStroes[indexPath.row].link*/
         
         return cell
     }
