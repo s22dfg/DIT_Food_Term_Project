@@ -14,7 +14,7 @@
         <!--Table View Controller-->
         <scene sceneID="dbz-uI-Nep">
             <objects>
-                <tableViewController id="TvY-ke-EpG" sceneMemberID="viewController">
+                <tableViewController id="TvY-ke-EpG" customClass="TableViewController" customModule="DIT_Food_Term_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dg0-AH-rFv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="261.60000000000002" y="-96.7016491754123"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="CCg-xJ-umM">
             <objects>
-                <viewController id="akd-jg-2XU" sceneMemberID="viewController">
+                <viewController id="akd-jg-2XU" userLabel="Detail View Controller" customClass="DetailViewController" customModule="DIT_Food_Term_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YR0-2R-Xx2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,12 +156,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNp-f4-kmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-242.42878560719643"/>
+            <point key="canvasLocation" x="1041" y="-255"/>
         </scene>
-        <!--View Controller-->
+        <!--Total Map View Controller-->
         <scene sceneID="4JJ-SK-3Hz">
             <objects>
-                <viewController id="KYc-PS-Vzv" sceneMemberID="viewController">
+                <viewController id="KYc-PS-Vzv" userLabel="Total Map View Controller" customClass="TotalMapViewController" customModule="DIT_Food_Term_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hof-zN-0Wg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,12 +182,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5w-AG-mkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.8" y="424.13793103448279"/>
+            <point key="canvasLocation" x="1041" y="422"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Out-oD-1xW">
             <objects>
-                <viewController id="xSj-8e-7wy" sceneMemberID="viewController">
+                <viewController id="xSj-8e-7wy" userLabel="Map View Controller" customClass="MapViewController" customModule="DIT_Food_Term_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kgZ-yr-WBP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiB-RF-4r6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="-242.42878560719643"/>
+            <point key="canvasLocation" x="1746" y="-255"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jH3-3q-70Z">
