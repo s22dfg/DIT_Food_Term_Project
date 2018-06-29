@@ -19,13 +19,32 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var name: String = ""
     var local1: String = ""
     var tel1: String = ""
+    var menu: String = ""
+    var type: String = ""
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
+            cell.textLabel?.text = "주소 : " + local1
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
+            cell.textLabel?.text = "전화번호 : " + tel1
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
+            cell.textLabel?.text = "메뉴 : " + menu
+            return cell
+        default :
+            let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as! MapTableViewCell
+            cell.configure(location: local1)
+            return cell
+        }
     }
     
 
