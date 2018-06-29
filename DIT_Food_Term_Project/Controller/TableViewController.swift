@@ -11,7 +11,7 @@ import UIKit
 class TableViewController: UITableViewController {
 
     @IBAction func btlink(_ sender: Any) {
-        UIApplication.shared.open(URL(String: foodStores[indexPath.row].link)! as URL, options: :, completionHandler: nil)
+        UIApplication.shared.open(URL(String: foodStores[IndexPath.row].link)! as URL, options: :, completionHandler: nil)
     }
     
     

@@ -16,6 +16,8 @@
 		F538B0FC20E5BC5A00F2121E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B0FB20E5BC5A00F2121E /* MapViewController.swift */; };
 		F538B0FE20E5BC6F00F2121E /* TotalMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B0FD20E5BC6F00F2121E /* TotalMapViewController.swift */; };
 		F538B10020E5BCEB00F2121E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B0FF20E5BCEB00F2121E /* TableViewController.swift */; };
+		F538B10320E5DD1F00F2121E /* FoodStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B10220E5DD1F00F2121E /* FoodStoreTableViewCell.swift */; };
+		F538B10520E5DD3C00F2121E /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B10420E5DD3C00F2121E /* MapTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		F538B0FB20E5BC5A00F2121E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F538B0FD20E5BC6F00F2121E /* TotalMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMapViewController.swift; sourceTree = "<group>"; };
 		F538B0FF20E5BCEB00F2121E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F538B10220E5DD1F00F2121E /* FoodStoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreTableViewCell.swift; sourceTree = "<group>"; };
+		F538B10420E5DD3C00F2121E /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				F538B10120E5BE2800F2121E /* Controller */,
 				F538B0EB20E5B79100F2121E /* Assets.xcassets */,
 				F538B0ED20E5B79100F2121E /* LaunchScreen.storyboard */,
+				F538B10620E5DD4100F2121E /* View */,
 				F538B0F020E5B79100F2121E /* Info.plist */,
 			);
 			path = DIT_Food_Term_Project;
@@ -91,6 +96,15 @@
 				F538B0FF20E5BCEB00F2121E /* TableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F538B10620E5DD4100F2121E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F538B10220E5DD1F00F2121E /* FoodStoreTableViewCell.swift */,
+				F538B10420E5DD3C00F2121E /* MapTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F538B0FE20E5BC6F00F2121E /* TotalMapViewController.swift in Sources */,
+				F538B10320E5DD1F00F2121E /* FoodStoreTableViewCell.swift in Sources */,
 				F538B0E520E5B79100F2121E /* AppDelegate.swift in Sources */,
+				F538B10520E5DD3C00F2121E /* MapTableViewCell.swift in Sources */,
 				F538B0FC20E5BC5A00F2121E /* MapViewController.swift in Sources */,
 				F538B10020E5BCEB00F2121E /* TableViewController.swift in Sources */,
 				F538B0FA20E5BC0A00F2121E /* DetailViewController.swift in Sources */,
