@@ -37,12 +37,12 @@ class MapViewController: UIViewController {
                 
                 if let location = placemark.location {
                     annotation.coordinate = location.coordinate
-                    self.TotalMapView.addAnnotation(annotation)
+                    self.totalMapView.addAnnotation(annotation)
                     
                     // Set zoom level
                     let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 700, 700)
-                    self.TotalMapView.setRegion(region, animated: true)
-                    self.TotalMapView.selectAnnotation(annotation, animated: true)
+                    self.totalMapView.setRegion(region, animated: true)
+                    self.totalMapView.selectAnnotation(annotation, animated: true)
                 }
             }
         })

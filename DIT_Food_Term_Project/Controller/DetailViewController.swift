@@ -42,7 +42,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return cell
         default :
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapCell", for: indexPath) as! FoodStoreTableViewCell
-            cell.configure(location: local1)
+            /*cell.configure(location: local1)*/
             return cell
         }
     }

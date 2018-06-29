@@ -11,9 +11,6 @@ import UIKit
 class FoodStoreTableViewCell: UITableViewCell {
 
     
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

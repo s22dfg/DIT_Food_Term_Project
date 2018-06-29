@@ -13,7 +13,6 @@ class TotalMapViewController: UIViewController {
 
     @IBOutlet weak var totalMapView: MKMapView!
 
-    var da : [FoodStoreTableViewCell] = []
     var totalFoodStores:[FoodStore] = []
     var annotations = [MKPointAnnotation]()
     
